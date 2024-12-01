@@ -6,7 +6,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 class Task(db.Model, SerializerMixin):
     __tablename__ = "tasks"
 
-    serialize_only = ('id', 'username', 'email', 'description', 'is_completed', 'created_at')
+    serialize_only = ('id', 'username', 'email', 'description', 'is_completed', 'created_at', 'updated_at')
 
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(100), nullable=False)
