@@ -9,3 +9,5 @@ class Config:
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     ITEMS_PER_PAGE = 3
     JWT_SECRET_KEY = os.getenv('JWT_SECRET_KEY', 'super-secret-key')
+    HOST = os.getenv('APP_HOST', 'localhost')
+    PORT = os.getenv('APP_PORT', 5000)

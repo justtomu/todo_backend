@@ -1,0 +1,14 @@
+version: '3.8'
+
+
+services:
+  server:
+    build:
+      context: .
+    command: bash /app/docker_entrypoint.sh
+    env_file: .env
+    restart: unless-stopped
+    volumes:
+      - .:/app
+    ports:
+      - "5000:5000"
